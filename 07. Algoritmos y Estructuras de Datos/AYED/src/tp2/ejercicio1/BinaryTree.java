@@ -57,7 +57,6 @@ public class BinaryTree<T> {
 
     public boolean isLeaf() {
         return !this.hasLeftChild() && !this.hasRightChild();
-
     }
 
     public boolean hasLeftChild() {
@@ -85,7 +84,7 @@ public class BinaryTree<T> {
     }
 
     public BinaryTree<T> espejo(){
-        BinaryTree<T> abEspejo=new BinaryTree(this.getData());
+        BinaryTree<T> abEspejo=new BinaryTree<>(this.getData());
         if (this.hasLeftChild())  abEspejo.addRightChild(this.getLeftChild().espejo());
         if (this.hasRightChild()) abEspejo.addLeftChild(this.getRightChild().espejo());
         return abEspejo;
@@ -97,14 +96,15 @@ public class BinaryTree<T> {
             System.out.println("Niveles inválidos");
             return;
         }
-        
+
+        BinaryTree<T> ab=null;
         Queue<BinaryTree<T>> cola=new LinkedList<>();
         cola.offer(this);
         cola.offer(null);
         int nivelActual=0;
 
         while ((!cola.isEmpty()) && (nivelActual<=m)) {
-            BinaryTree<T> ab=cola.poll();
+            ab=cola.poll();
             if (ab!=null) {
                 if ((nivelActual>=n) && (nivelActual<=m))
                     System.out.print(ab.getData() + " ");
@@ -133,14 +133,15 @@ public class BinaryTree<T> {
             System.out.println("Niveles inválidos");
             return;
         }
-        
-        Queue<BinaryTree<T>> cola=new Queue();
+
+        BinaryTree<T> ab=null;
+        Queue<BinaryTree<T>> cola=new Queue<>();
         cola.enqueue(this);
         cola.enqueue(null);
         int nivelActual=0;
 
         while ((!cola.isEmpty()) && (nivelActual<=m)) {
-            BinaryTree<T> ab=cola.dequeue();
+            ab=cola.dequeue();
             if (ab!=null) {
                 if ((nivelActual>=n) && (nivelActual<=m))
                     System.out.print(ab.getData() + " ");

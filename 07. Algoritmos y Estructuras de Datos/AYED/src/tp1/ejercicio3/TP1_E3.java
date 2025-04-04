@@ -42,11 +42,11 @@ public class TP1_E3 {
         for (int i=0; i<proMax; i++)
             profesores[i]=new Profesor(GeneradorAleatorio.generarString(tam), GeneradorAleatorio.generarString(tam), GeneradorAleatorio.generarString(tam), GeneradorAleatorio.generarString(tam), GeneradorAleatorio.generarString(tam));
 
-        for (Estudiante i: estudiantes)
-            System.out.println(i.tusDatos());
+        for (Estudiante e: estudiantes)
+            System.out.println(e.tusDatos());
         System.out.println();
-        for (Profesor i: profesores)
-            System.out.println(i.tusDatos());
+        for (Profesor p: profesores)
+            System.out.println(p.tusDatos());
 
     }
 

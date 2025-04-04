@@ -30,7 +30,7 @@ public class TP2_E5 {
 
         ProfundidadDeArbolBinario abProf=new ProfundidadDeArbolBinario(ab);
         int p=GeneradorAleatorio.generarInt(3);
-        System.out.println("\nLa suma de todos los nodos del árbol binario abb que se encuentran a la profundidad " + p + " es " + abProf.sumaElementosProfundidad(p));
+        System.out.println("\nLa suma de todos los nodos del árbol binario ab que se encuentran a la profundidad " + p + " es " + abProf.sumaElementosProfundidad(p));
 
     }
 
