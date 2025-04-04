@@ -28,14 +28,15 @@ public class BinaryTreePrinter {
             System.out.println("Árbol vacío");
             return;
         }
-        
-        Queue<BinaryTree<T>> cola=new Queue();
+
+        BinaryTree<T> ab=null;
+        Queue<BinaryTree<T>> cola=new Queue<>();
         cola.enqueue(arbol);
         cola.enqueue(null);
         int nivelActual=0;
 
         while (!cola.isEmpty()) {
-            BinaryTree<T> ab=cola.dequeue();
+            ab=cola.dequeue();
             if (ab!=null) {
                 System.out.print(ab.getData() + " ");
                 if (ab.hasLeftChild())

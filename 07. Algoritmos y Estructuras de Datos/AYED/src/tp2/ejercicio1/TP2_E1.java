@@ -8,8 +8,7 @@ Considerar la siguiente especificación de la clase Java BinaryTree (con la repr
 •	El método addLeftChild(BinaryTree<T> child) y addRightChild(BinaryTree<T> child)
 •	agrega un hijo como hijo izquierdo o derecho del árbol.
 •	El método removeLeftChild() y removeRightChild() eliminan el hijo correspondiente.
-•	El método isEmpty() indica si el árbol está vacío y el método isLeaf() indica si no tiene
-•	hijos.
+•	El método isEmpty() indica si el árbol está vacío y el método isLeaf() indica si no tiene hijos.
 •	El método hasLeftChild() y hasRightChild() devuelve un booleano indicando si tiene
 •	dicho hijo el árbol receptor del mensaje.
 Analizar la implementación en JAVA de la clase BinaryTree brindada por la cátedra.
@@ -33,7 +32,7 @@ public class TP2_E1 {
         BinaryTreePrinter.imprimirInOrden(ab);
         System.out.print("\nImpresión Post-Orden del árbol binario ab: ");
         BinaryTreePrinter.imprimirPostOrden(ab);
-        System.out.println("\nImpresión por niveles del árbol binario ab: ");
+        System.out.println("\nImpresión Por Niveles del árbol binario ab: ");
         BinaryTreePrinter.imprimirPorNiveles(ab);
 
     }
