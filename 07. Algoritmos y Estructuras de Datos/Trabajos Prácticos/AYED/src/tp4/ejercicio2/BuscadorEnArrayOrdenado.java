@@ -34,7 +34,7 @@ public class BuscadorEnArrayOrdenado {
         int iter=0;
         boolean encontre=false;
         long initTime=System.currentTimeMillis();
-        while ((bajo<alto) && !encontre) {
+        while ((bajo<alto) && (!encontre)) {
             iter++;
             if (datos[bajo++]==valor)
                 encontre=true;
@@ -49,14 +49,14 @@ public class BuscadorEnArrayOrdenado {
         int iter=0;
         boolean encontre=false;
         long initTime=System.currentTimeMillis();
-        while ((bajo<alto) && !encontre) {
+        while ((bajo<alto) && (!encontre)) {
             iter++;
             int mid=(bajo+alto)/2;
             if (datos[mid]<valor)
                 bajo=mid+1;
             else if (datos[mid]>valor)
                 alto=mid-1;
-            else if (datos[mid]==valor)
+            else
                 encontre=true;
         }
         long finTime=System.currentTimeMillis();
